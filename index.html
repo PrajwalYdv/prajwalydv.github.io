@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajwal Yadav | Software Engineer</title>
+  <meta name="description" content="Prajwal Yadav – AI & Software Engineer Portfolio" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #020617;
+      --dark-2: #020617;
+      --light: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
+      --glass: rgba(255, 255, 255, 0.08);
+      --blur: blur(20px);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--light);
+      overflow-x: hidden;
+    }
+
+    /* Apple-style glow background */
+    .glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(59,130,246,0.35), transparent 60%);
+      top: -200px;
+      right: -200px;
+      filter: blur(120px);
+      z-index: -1;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(120px); }
+    }
+
+    section { padding: 120px 24px; }
+    .container { max-width: 1200px; margin: auto; }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .hero span {
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      max-width: 640px;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    .hero .meta {
+      margin-top: 30px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Glass cards */
+    .card {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 40px 120px rgba(59,130,246,0.15);
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    h3 { font-size: 1.3rem; margin-bottom: 10px; }
+    p { line-height: 1.7; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    /* Skill pills */
+    .pill {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 6px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.15);
+      color: #bfdbfe;
+      font-size: 0.85rem;
+      border: 1px solid rgba(59,130,246,0.3);
+    }
+
+    footer {
+      padding: 60px 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow"></div>
+
+  <!-- HERO -->
+  <header>
+    <div class="container hero">
+      <h1>Prajwal <span>Yadav</span></h1>
+      <p>
+        Computer Science Engineer specializing in Artificial Intelligence, Machine Learning, and modern software development. I design intelligent systems and clean digital experiences.
+      </p>
+      <div class="meta">Birgunj, Nepal · Prajwaly24@gmail.com · +977 9863453140</div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          I am a Computer Science Engineering graduate with a deep interest in AI-driven systems, computer vision, and data-centric applications. My work blends strong engineering fundamentals with cutting-edge research approaches such as Vision Transformers and deep neural networks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Facial Expression Recognition</h3>
+          <p>
+            Built a Vision Transformer-based system to classify 72 facial expressions from FER2013, demonstrating strong feature extraction in complex visual data.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Disease Prediction from Medical Images</h3>
+          <p>
+            Compared CNN, ViT, and KAN models across five medical datasets (24,000+ images), highlighting strengths of hybrid AI architectures.
+          </p>
+        </div>
+        <div class="card">
+          <h3>AI Movie Recommendation Engine</h3>
+          <p>
+            Designed an NLP-powered recommendation system with cosine similarity and deployed it using Streamlit for real-time interaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="container">
+      <h2>Skills & Technologies</h2>
+      <div class="card">
+        <span class="pill">Python</span>
+        <span class="pill">TensorFlow</span>
+        <span class="pill">PyTorch</span>
+        <span class="pill">Java</span>
+        <span class="pill">C++</span>
+        <span class="pill">SQL</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">Linux</span>
+        <span class="pill">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Highway to High-Radius Internship</h3>
+        <p>
+          Supported technical operations, troubleshooting, and system maintenance while collaborating with teams in a professional corporate environment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Prajwal Yadav · Designed with Apple-inspired motion & glass UI</p>
+  </footer>
+
+</body>
+</html>
