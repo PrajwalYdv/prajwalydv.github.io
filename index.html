@@ -3,271 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prajwal Yadav | AI & Software Engineer</title>
+<title>Prajwal Yadav | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#020617;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-  --accent:#3b82f6;
-  --glass:rgba(255,255,255,0.08);
-  --blur:blur(22px);
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-
 body{
+  margin:0;
   font-family:'Inter',sans-serif;
-  background:radial-gradient(circle at top,#020617,#000);
-  color:var(--text);
-  overflow-x:hidden;
+  background:#020617;
+  color:#e5e7eb;
 }
 
-/* glow */
-.glow{
-  position:fixed;
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle,rgba(59,130,246,.35),transparent 60%);
-  top:-250px;
-  right:-250px;
-  filter:blur(140px);
-  z-index:-1;
-  animation:floatGlow 14s ease-in-out infinite;
-}
-@keyframes floatGlow{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(160px);}
-}
+a{color:#60a5fa;text-decoration:none}
 
-section{padding:120px 24px;}
-.container{max-width:1100px;margin:auto;}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:80px 20px;
+}
 
 /* HERO */
-header{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-}
 .hero{
   text-align:center;
-  animation:heroFade 1.5s ease forwards;
-}
-@keyframes heroFade{
-  from{opacity:0;transform:translateY(40px);}
-  to{opacity:1;transform:translateY(0);}
+  padding:100px 20px 80px;
 }
 
-.profile-img{
-  width:190px;height:190px;
+.hero img{
+  width:160px;
+  height:160px;
   border-radius:50%;
   object-fit:cover;
-  margin-bottom:32px;
-  border:2px solid rgba(255,255,255,.2);
-  box-shadow:0 0 0 8px rgba(59,130,246,.15),
-             0 40px 120px rgba(0,0,0,.7);
-  animation:floatImage 6s ease-in-out infinite;
-}
-@keyframes floatImage{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-14px);}
+  margin-bottom:20px;
+  box-shadow:0 0 40px rgba(59,130,246,.5);
 }
 
-h1{
-  font-size:clamp(3rem,6vw,4.6rem);
-  font-weight:700;
+.hero h1{
+  font-size:3rem;
 }
-h1 span{
-  background:linear-gradient(90deg,#60a5fa,#3b82f6);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+
+.hero span{color:#60a5fa}
 
 .hero p{
-  margin:22px auto;
-  max-width:720px;
-  font-size:1.2rem;
-  color:var(--muted);
+  max-width:650px;
+  margin:15px auto 25px;
+  color:#94a3b8;
 }
 
-.social{
-  margin-top:36px;
-  display:flex;
-  gap:18px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
 .social a{
-  padding:14px 30px;
-  border-radius:999px;
-  background:rgba(59,130,246,.15);
-  border:1px solid rgba(59,130,246,.3);
-  color:#bfdbfe;
-  text-decoration:none;
-  transition:.4s;
-}
-.social a:hover{
-  transform:translateY(-6px) scale(1.05);
-  background:rgba(59,130,246,.3);
-  box-shadow:0 30px 80px rgba(59,130,246,.45);
-}
-
-/* CARDS */
-.card{
-  background:var(--glass);
-  backdrop-filter:var(--blur);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:28px;
-  padding:36px;
-  margin-bottom:40px;
-}
-
-/* reveal */
-.reveal{
-  opacity:0;
-  transform:translateY(60px);
-  transition:1s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
-
-h2{
-  font-size:2.4rem;
-  margin-bottom:50px;
-  text-align:center;
-}
-
-/* skills */
-.pill{
-  display:inline-block;
+  margin:0 8px;
   padding:10px 18px;
-  margin:8px;
-  border-radius:999px;
-  background:rgba(59,130,246,.15);
-  border:1px solid rgba(59,130,246,.3);
-  font-size:.85rem;
-  color:#bfdbfe;
-  transition:.3s;
+  border-radius:20px;
+  background:#0f172a;
+  border:1px solid #1e293b;
 }
-.pill:hover{transform:scale(1.12);}
 
+/* SECTIONS */
+section h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  border-bottom:2px solid #1e293b;
+  padding-bottom:8px;
+}
+
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:20px;
+}
+
+/* SKILLS */
+.skill{
+  display:inline-block;
+  padding:8px 14px;
+  margin:6px;
+  background:#0f172a;
+  border-radius:20px;
+  font-size:.9rem;
+}
+
+/* FOOTER */
 footer{
-  padding:60px 24px;
   text-align:center;
-  color:var(--muted);
+  padding:40px;
+  color:#64748b;
+  border-top:1px solid #1e293b;
 }
 </style>
 </head>
 
 <body>
 
-<div class="glow"></div>
+<!-- HERO -->
+<div class="hero">
+  <img src="profile.jpg" alt="Prajwal Yadav">
+  <h1>Prajwal <span>Yadav</span></h1>
+  <p>Computer Science Engineer specializing in Artificial Intelligence, Machine Learning, and modern software development.</p>
 
-<header>
-  <div class="container hero">
-    <img src="profile.jpg" class="profile-img">
-    <h1>Prajwal <span>Yadav</span></h1>
-    <p>Computer Science Engineer specializing in Artificial Intelligence, Machine Learning, and modern software development.</p>
-
-    <div class="social">
-      <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/_prajwal_ydv" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
-    </div>
+  <div class="social">
+    <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/_prajwal_ydv" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
   </div>
-</header>
+</div>
 
-<section>
-<div class="container">
-<h2>About Me</h2>
-<div class="card reveal">
-<p>
-I am a Computer Science Engineering graduate with strong expertise in AI, Machine Learning, and deep learning architectures.
-I enjoy building intelligent systems and transforming research ideas into real-world solutions.
-</p>
-</div>
-</div>
+<!-- ABOUT -->
+<section class="container">
+  <h2>About Me</h2>
+  <div class="card">
+    I am a Computer Science Engineering graduate with strong interest in AI, Machine Learning,
+    computer vision, and scalable software systems. I enjoy building intelligent solutions that
+    solve real-world problems.
+  </div>
 </section>
 
-<section>
-<div class="container">
-<h2>Education</h2>
-<div class="card reveal">
-<p><strong>B.Tech in Computer Science & Engineering</strong><br>
-Kalinga Institute of Industrial Technology (2021–2025)<br>
-CGPA: 8.19</p>
-</div>
-</div>
+<!-- EDUCATION -->
+<section class="container">
+  <h2>Education</h2>
+  <div class="card">
+    <strong>B.Tech in Computer Science & Engineering</strong><br>
+    Kalinga Institute of Industrial Technology (2021–2025)<br>
+    CGPA: 8.19
+  </div>
 </section>
 
-<section>
-<div class="container">
-<h2>Projects</h2>
+<!-- PROJECTS -->
+<section class="container">
+  <h2>Projects</h2>
 
-<div class="card reveal">
-<strong>Facial Expression Recognition (Vision Transformer)</strong>
-<p>Built a ViT-based model to classify 72 facial expressions using the FER2013 dataset.</p>
-</div>
+  <div class="card">
+    <strong>Facial Expression Recognition (Vision Transformer)</strong><br>
+    Built a ViT-based deep learning model to classify 72 facial expressions using the FER2013 dataset.
+  </div>
 
-<div class="card reveal">
-<strong>Image-Based Disease Prediction</strong>
-<p>Compared CNN, ViT, and KAN models across 24,000+ medical images for disease detection.</p>
-</div>
+  <div class="card">
+    <strong>Image-Based Disease Prediction</strong><br>
+    Compared CNN, ViT, and KAN models across 24,000+ medical images for disease detection.
+  </div>
 
-<div class="card reveal">
-<strong>Movie Recommendation System</strong>
-<p>Developed a content-based NLP recommendation engine with cosine similarity and Streamlit UI.</p>
-</div>
-
-</div>
+  <div class="card">
+    <strong>Movie Recommendation System</strong><br>
+    Developed a content-based NLP recommendation engine using cosine similarity and Streamlit.
+  </div>
 </section>
 
-<section>
-<div class="container">
-<h2>Internship</h2>
-<div class="card reveal">
-<strong>Highradius – Highway to High-Radius Internship</strong>
-<p>Worked on technical support, system maintenance, troubleshooting, and team collaboration.</p>
-</div>
-</div>
+<!-- INTERNSHIP -->
+<section class="container">
+  <h2>Internship Experience</h2>
+  <div class="card">
+    <strong>Highradius – Highway to High-Radius Internship</strong><br>
+    Worked on technical support, system maintenance, troubleshooting, and team collaboration.
+  </div>
 </section>
 
-<section>
-<div class="container">
-<h2>Skills</h2>
-<div class="card reveal">
-<span class="pill">Python</span>
-<span class="pill">TensorFlow</span>
-<span class="pill">PyTorch</span>
-<span class="pill">Java</span>
-<span class="pill">C++</span>
-<span class="pill">SQL</span>
-<span class="pill">JavaScript</span>
-<span class="pill">Linux</span>
-<span class="pill">Git</span>
-</div>
-</div>
+<!-- SKILLS -->
+<section class="container">
+  <h2>Skills</h2>
+  <div class="card">
+    <span class="skill">Python</span>
+    <span class="skill">TensorFlow</span>
+    <span class="skill">PyTorch</span>
+    <span class="skill">Java</span>
+    <span class="skill">C++</span>
+    <span class="skill">SQL</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">Linux</span>
+    <span class="skill">Git</span>
+  </div>
 </section>
 
 <footer>
 © 2025 Prajwal Yadav · Professional Portfolio
 </footer>
-
-<script>
-const reveals=document.querySelectorAll('.reveal');
-window.addEventListener('scroll',()=>{
-reveals.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('active');
-}});
-});
-</script>
 
 </body>
 </html>
