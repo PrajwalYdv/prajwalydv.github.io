@@ -1,256 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Prajwal Yadav | Software Engineer</title>
+<section id="projects" class="section">
+  <h2>Projects</h2>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#020617;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-  --accent:#60a5fa;
-  --line:#1e293b;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-  font-family:Inter,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-}
-
-/* Layout */
-.wrapper{
-  max-width:900px;
-  margin:auto;
-  padding:80px 20px;
-}
-
-/* Hero */
-.hero{
-  text-align:center;
-  padding-top:40px;
-}
-
-.hero img{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:20px;
-  border:2px solid var(--line);
-}
-
-.hero h1{
-  font-size:2.8rem;
-  font-weight:700;
-}
-
-.hero h1 span{color:var(--accent)}
-
-.hero p{
-  max-width:650px;
-  margin:14px auto 24px;
-  color:var(--muted);
-}
-
-.social a{
-  display:inline-block;
-  margin:0 6px;
-  padding:8px 14px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  font-size:.9rem;
-  color:var(--accent);
-  text-decoration:none;
-}
-
-.social a:hover{
-  background:#0f172a;
-}
-
-/* Section titles */
-section{
-  margin-top:80px;
-}
-
-section h2{
-  font-size:1.8rem;
-  margin-bottom:20px;
-  border-bottom:1px solid var(--line);
-  padding-bottom:8px;
-}
-
-/* About */
-.about{
-  color:#d1d5db;
-}
-
-/* Education / Experience */
-.item{
-  margin-bottom:20px;
-}
-
-.item strong{
-  display:block;
-  font-weight:600;
-}
-
-/* Projects */
-.projects .project{
-  padding:18px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.projects .project:last-child{
-  border-bottom:none;
-}
-
-.project-title{
-  font-weight:600;
-}
-
-/* Skills */
-.skills span{
-  display:inline-block;
-  margin:6px 6px 0 0;
-  padding:6px 12px;
-  border:1px solid var(--line);
-  border-radius:14px;
-  font-size:.85rem;
-  color:#cbd5f5;
-}
-
-/* Footer */
-footer{
-  margin-top:100px;
-  padding-top:30px;
-  border-top:1px solid var(--line);
-  text-align:center;
-  color:#64748b;
-  font-size:.9rem;
-}
-
-/* Subtle fade-in */
-.fade{
-  opacity:0;
-  transform:translateY(15px);
-  animation:fadeUp .6s ease forwards;
-}
-
-@keyframes fadeUp{
-  to{opacity:1;transform:none}
-}
-</style>
-</head>
-
-<body>
-
-<div class="wrapper">
-
-  <!-- HERO -->
-  <div class="hero fade">
-    <img src="profile.jpg" alt="Prajwal Yadav">
-    <h1>Prajwal <span>Yadav</span></h1>
+  <div class="project">
+    <h3>Facial Expression Recognition (Vision Transformer)</h3>
     <p>
-      Computer Science Engineer specializing in Artificial Intelligence,
-      Machine Learning, and modern software development.
+      Built a Vision Transformer–based deep learning model to classify
+      72 facial expressions using the FER2013 dataset. Focused on feature
+      extraction and model performance optimization.
     </p>
-    <div class="social">
-      <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/_prajwal_ydv" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
-    </div>
   </div>
 
-  <!-- ABOUT -->
-  <section class="fade">
-    <h2>About</h2>
-    <p class="about">
-      I am a Computer Science Engineering graduate with a strong foundation in
-      artificial intelligence, machine learning, and deep learning. I enjoy
-      building intelligent systems, experimenting with modern architectures,
-      and applying research concepts to real-world software solutions.
+  <div class="project">
+    <h3>Image-Based Disease Prediction</h3>
+    <p>
+      Conducted a comparative analysis of CNN, ViT, and KAN models on
+      24,000+ medical images for disease detection across multiple datasets.
     </p>
-  </section>
+  </div>
 
-  <!-- EDUCATION -->
-  <section class="fade">
-    <h2>Education</h2>
-    <div class="item">
-      <strong>B.Tech in Computer Science & Engineering</strong>
-      Kalinga Institute of Industrial Technology<br>
-      2021 – 2025 · CGPA: 8.19
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects fade">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <div class="project-title">
-        Facial Expression Recognition (Vision Transformer)
-      </div>
-      Built a ViT-based deep learning model to classify 72 facial expressions
-      using the FER2013 dataset.
-    </div>
-
-    <div class="project">
-      <div class="project-title">
-        Image-Based Disease Prediction
-      </div>
-      Conducted a comparative study using CNN, ViT, and KAN models on
-      24,000+ medical images for disease detection.
-    </div>
-
-    <div class="project">
-      <div class="project-title">
-        Movie Recommendation System
-      </div>
+  <div class="project">
+    <h3>Movie Recommendation System</h3>
+    <p>
       Developed a content-based NLP recommendation engine using cosine
-      similarity and deployed it with Streamlit.
-    </div>
-  </section>
-
-  <!-- INTERNSHIP -->
-  <section class="fade">
-    <h2>Internship</h2>
-    <div class="item">
-      <strong>Highradius – Highway to High-Radius Internship</strong>
-      Worked on technical support, system maintenance, troubleshooting,
-      documentation, and team collaboration.
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="fade">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Python</span>
-      <span>TensorFlow</span>
-      <span>PyTorch</span>
-      <span>Java</span>
-      <span>C++</span>
-      <span>SQL</span>
-      <span>JavaScript</span>
-      <span>Linux</span>
-      <span>Git</span>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Prajwal Yadav · Professional Portfolio
-  </footer>
-
-</div>
-
-</body>
-</html>
+      similarity and deployed it using Streamlit.
+    </p>
+  </div>
+</section>
