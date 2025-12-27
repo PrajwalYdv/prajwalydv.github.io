@@ -1,184 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prajwal Yadav | Software Engineer</title>
-  <meta name="description" content="Prajwal Yadav – AI & Software Engineer Portfolio" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prajwal Yadav | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --dark: #020617;
-      --muted: #94a3b8;
-      --accent: #3b82f6;
-      --glass: rgba(255,255,255,0.08);
-      --blur: blur(20px);
-    }
+<style>
+:root {
+  --bg: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+  --glass: rgba(255,255,255,0.08);
+  --blur: blur(24px);
+}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #020617, #000);
-      color: #e5e7eb;
-      overflow-x: hidden;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: var(--text);
+  overflow-x: hidden;
+}
 
-    .glow {
-      position: fixed;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(59,130,246,0.35), transparent 60%);
-      top: -200px;
-      right: -200px;
-      filter: blur(120px);
-      z-index: -1;
-      animation: float 12s ease-in-out infinite;
-    }
+/* Ambient glow */
+.glow {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(59,130,246,.35), transparent 60%);
+  top: -250px;
+  right: -250px;
+  filter: blur(140px);
+  z-index: -1;
+  animation: floatGlow 14s ease-in-out infinite;
+}
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(120px); }
-    }
+@keyframes floatGlow {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(160px); }
+}
 
-    section { padding: 120px 24px; }
-    .container { max-width: 1200px; margin: auto; }
+/* Containers */
+section { padding: 120px 24px; }
+.container { max-width: 1200px; margin:auto; }
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
+/* HERO */
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 
-    .hero { text-align: center; }
+.hero {
+  text-align: center;
+  animation: heroFade 1.6s ease forwards;
+}
 
-    .profile-img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 30px;
-      border: 2px solid rgba(255,255,255,0.2);
-      box-shadow:
-        0 0 0 6px rgba(59,130,246,0.12),
-        0 30px 80px rgba(0,0,0,0.6);
-      transition: transform .6s ease, box-shadow .6s ease;
-    }
+@keyframes heroFade {
+  from { opacity:0; transform: translateY(40px); }
+  to { opacity:1; transform: translateY(0); }
+}
 
-    .profile-img:hover {
-      transform: scale(1.05);
-      box-shadow:
-        0 0 0 8px rgba(59,130,246,0.25),
-        0 40px 120px rgba(59,130,246,0.4);
-    }
+/* Profile image */
+.profile-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 32px;
+  border: 2px solid rgba(255,255,255,.2);
+  box-shadow:
+    0 0 0 8px rgba(59,130,246,.15),
+    0 40px 120px rgba(0,0,0,.7);
+  animation: floatImage 6s ease-in-out infinite;
+}
 
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      font-weight: 700;
-      letter-spacing: -1px;
-    }
+@keyframes floatImage {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
 
-    h1 span {
-      background: linear-gradient(90deg, #60a5fa, #3b82f6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+h1 {
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
 
-    .hero p {
-      margin: 20px auto;
-      max-width: 680px;
-      font-size: 1.2rem;
-      color: var(--muted);
-    }
+h1 span {
+  background: linear-gradient(90deg,#60a5fa,#3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .social {
-      margin-top: 35px;
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+.hero p {
+  margin: 22px auto;
+  max-width: 700px;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
 
-    .social a {
-      padding: 12px 26px;
-      border-radius: 999px;
-      background: rgba(59,130,246,0.15);
-      border: 1px solid rgba(59,130,246,0.3);
-      color: #bfdbfe;
-      text-decoration: none;
-      font-size: .9rem;
-      transition: all .4s ease;
-    }
+/* Social buttons */
+.social {
+  margin-top: 36px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    .social a:hover {
-      background: rgba(59,130,246,0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(59,130,246,0.4);
-    }
+.social a {
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: rgba(59,130,246,.15);
+  border: 1px solid rgba(59,130,246,.3);
+  color: #bfdbfe;
+  text-decoration: none;
+  font-size: .9rem;
+  transition: all .4s ease;
+}
 
-    .card {
-      background: var(--glass);
-      backdrop-filter: var(--blur);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 32px;
-    }
+.social a:hover {
+  transform: translateY(-6px) scale(1.05);
+  background: rgba(59,130,246,.3);
+  box-shadow: 0 30px 80px rgba(59,130,246,.45);
+}
 
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 50px;
-      text-align: center;
-    }
+/* Glass card */
+.card {
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 28px;
+  padding: 36px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .9s ease;
+}
 
-    .pill {
-      display: inline-block;
-      padding: 8px 16px;
-      margin: 6px;
-      border-radius: 999px;
-      background: rgba(59,130,246,0.15);
-      border: 1px solid rgba(59,130,246,0.3);
-      font-size: .85rem;
-      color: #bfdbfe;
-    }
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    footer {
-      padding: 60px 24px;
-      text-align: center;
-      color: var(--muted);
-    }
-  </style>
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* Skills */
+.pill {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 999px;
+  background: rgba(59,130,246,.15);
+  border: 1px solid rgba(59,130,246,.3);
+  color: #bfdbfe;
+  font-size: .85rem;
+  transition: transform .3s ease;
+}
+
+.pill:hover {
+  transform: scale(1.12);
+}
+
+/* Footer */
+footer {
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
-  <div class="glow"></div>
+<div class="glow"></div>
 
-  <!-- HERO -->
-  <header>
-    <div class="container hero">
-      <img src="profile.jpg" alt="Prajwal Yadav" class="profile-img">
+<header>
+  <div class="container hero">
+    <img src="profile.jpg" class="profile-img" alt="Prajwal Yadav">
+    <h1>Prajwal <span>Yadav</span></h1>
+    <p>
+      Computer Science Engineer specializing in Artificial Intelligence,
+      Machine Learning, and premium software experiences.
+    </p>
 
-      <h1>Prajwal <span>Yadav</span></h1>
-
-      <p>
-        Computer Science Engineer specializing in Artificial Intelligence,
-        Machine Learning, and modern software development.
-      </p>
-
-      <div class="social">
-        <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/_prajwal_ydv" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
-      </div>
+    <div class="social">
+      <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/_prajwal_ydv" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <footer>
-    © 2025 Prajwal Yadav · Professional Portfolio
-  </footer>
+<section>
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="card reveal">
+      <p>
+        I am a Computer Science Engineering graduate with a strong passion for
+        AI-driven systems, computer vision, and scalable modern software.
+        I focus on building clean, intelligent, and impactful digital solutions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="card reveal">
+      <span class="pill">Python</span>
+      <span class="pill">TensorFlow</span>
+      <span class="pill">PyTorch</span>
+      <span class="pill">Java</span>
+      <span class="pill">C++</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">Linux</span>
+      <span class="pill">Git</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Prajwal Yadav · Premium Animated Portfolio
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
+
