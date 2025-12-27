@@ -8,6 +8,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  .section {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.project-feature {
+  margin-bottom: 60px;
+}
+
+.project-feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.project-feature p {
+  color: #94a3b8;
+  max-width: 720px;
+}
+
 :root{
   --bg:#020617;
   --text:#e5e7eb;
@@ -152,6 +177,35 @@ footer{
 </head>
 
 <body>
+  <section class="section" id="projects">
+  <h2>Selected Work</h2>
+
+  <div class="project-feature">
+    <h3>Facial Expression Recognition</h3>
+    <p>
+      A deep learning project using Vision Transformers to classify
+      72 facial expressions from the FER2013 dataset, focusing on
+      modern transformer-based architectures.
+    </p>
+  </div>
+
+  <div class="project-feature">
+    <h3>Image-Based Disease Prediction</h3>
+    <p>
+      A comparative study analyzing CNN, ViT, and KAN models across
+      multiple medical imaging datasets with over 24,000 images.
+    </p>
+  </div>
+
+  <div class="project-feature">
+    <h3>Movie Recommendation System</h3>
+    <p>
+      A content-based NLP recommendation engine designed to provide
+      personalized movie suggestions using cosine similarity.
+    </p>
+  </div>
+</section>
+
 
 <div class="wrapper">
 
