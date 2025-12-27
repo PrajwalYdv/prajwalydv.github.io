@@ -6,17 +6,14 @@
   <title>Prajwal Yadav | Software Engineer</title>
   <meta name="description" content="Prajwal Yadav – AI & Software Engineer Portfolio" />
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --dark: #020617;
-      --dark-2: #020617;
-      --light: #e5e7eb;
       --muted: #94a3b8;
       --accent: #3b82f6;
-      --glass: rgba(255, 255, 255, 0.08);
+      --glass: rgba(255,255,255,0.08);
       --blur: blur(20px);
     }
 
@@ -26,11 +23,10 @@
     body {
       font-family: 'Inter', sans-serif;
       background: radial-gradient(circle at top, #020617, #000);
-      color: var(--light);
+      color: #e5e7eb;
       overflow-x: hidden;
     }
 
-    /* Apple-style glow background */
     .glow {
       position: fixed;
       width: 600px;
@@ -44,58 +40,91 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
+      0%,100% { transform: translateY(0); }
       50% { transform: translateY(120px); }
     }
 
     section { padding: 120px 24px; }
     .container { max-width: 1200px; margin: auto; }
 
-    /* HERO */
     header {
       min-height: 100vh;
       display: flex;
       align-items: center;
     }
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
+    .hero { text-align: center; }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      border: 2px solid rgba(255,255,255,0.2);
+      box-shadow:
+        0 0 0 6px rgba(59,130,246,0.12),
+        0 30px 80px rgba(0,0,0,0.6);
+      transition: transform .6s ease, box-shadow .6s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow:
+        0 0 0 8px rgba(59,130,246,0.25),
+        0 40px 120px rgba(59,130,246,0.4);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
       font-weight: 700;
       letter-spacing: -1px;
     }
 
-    .hero span {
+    h1 span {
       background: linear-gradient(90deg, #60a5fa, #3b82f6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero p {
-      margin-top: 20px;
-      max-width: 640px;
+      margin: 20px auto;
+      max-width: 680px;
       font-size: 1.2rem;
       color: var(--muted);
     }
 
-    .hero .meta {
-      margin-top: 30px;
-      font-size: 0.95rem;
-      color: var(--muted);
+    .social {
+      margin-top: 35px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    /* Glass cards */
+    .social a {
+      padding: 12px 26px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: .9rem;
+      transition: all .4s ease;
+    }
+
+    .social a:hover {
+      background: rgba(59,130,246,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(59,130,246,0.4);
+    }
+
     .card {
       background: var(--glass);
       backdrop-filter: var(--blur);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 24px;
       padding: 32px;
-      transition: transform .4s ease, box-shadow .4s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 40px 120px rgba(59,130,246,0.15);
     }
 
     h2 {
@@ -104,25 +133,15 @@
       text-align: center;
     }
 
-    h3 { font-size: 1.3rem; margin-bottom: 10px; }
-    p { line-height: 1.7; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
-    }
-
-    /* Skill pills */
     .pill {
       display: inline-block;
       padding: 8px 16px;
       margin: 6px;
       border-radius: 999px;
       background: rgba(59,130,246,0.15);
-      color: #bfdbfe;
-      font-size: 0.85rem;
       border: 1px solid rgba(59,130,246,0.3);
+      font-size: .85rem;
+      color: #bfdbfe;
     }
 
     footer {
@@ -132,6 +151,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="glow"></div>
@@ -139,86 +159,25 @@
   <!-- HERO -->
   <header>
     <div class="container hero">
+      <img src="profile.jpg" alt="Prajwal Yadav" class="profile-img">
+
       <h1>Prajwal <span>Yadav</span></h1>
+
       <p>
-        Computer Science Engineer specializing in Artificial Intelligence, Machine Learning, and modern software development. I design intelligent systems and clean digital experiences.
+        Computer Science Engineer specializing in Artificial Intelligence,
+        Machine Learning, and modern software development.
       </p>
-      <div class="meta">Birgunj, Nepal · Prajwaly24@gmail.com · +977 9863453140</div>
+
+      <div class="social">
+        <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/_prajwal_ydv" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section>
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="card">
-        <p>
-          I am a Computer Science Engineering graduate with a deep interest in AI-driven systems, computer vision, and data-centric applications. My work blends strong engineering fundamentals with cutting-edge research approaches such as Vision Transformers and deep neural networks.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Facial Expression Recognition</h3>
-          <p>
-            Built a Vision Transformer-based system to classify 72 facial expressions from FER2013, demonstrating strong feature extraction in complex visual data.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Disease Prediction from Medical Images</h3>
-          <p>
-            Compared CNN, ViT, and KAN models across five medical datasets (24,000+ images), highlighting strengths of hybrid AI architectures.
-          </p>
-        </div>
-        <div class="card">
-          <h3>AI Movie Recommendation Engine</h3>
-          <p>
-            Designed an NLP-powered recommendation system with cosine similarity and deployed it using Streamlit for real-time interaction.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <div class="container">
-      <h2>Skills & Technologies</h2>
-      <div class="card">
-        <span class="pill">Python</span>
-        <span class="pill">TensorFlow</span>
-        <span class="pill">PyTorch</span>
-        <span class="pill">Java</span>
-        <span class="pill">C++</span>
-        <span class="pill">SQL</span>
-        <span class="pill">JavaScript</span>
-        <span class="pill">Linux</span>
-        <span class="pill">Git</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section>
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="card">
-        <h3>Highway to High-Radius Internship</h3>
-        <p>
-          Supported technical operations, troubleshooting, and system maintenance while collaborating with teams in a professional corporate environment.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <p>© 2025 Prajwal Yadav · Designed with Apple-inspired motion & glass UI</p>
+    © 2025 Prajwal Yadav · Professional Portfolio
   </footer>
 
 </body>
