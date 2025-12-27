@@ -3,190 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prajwal Yadav | Portfolio</title>
+<title>Prajwal Yadav | AI & Software Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg: #020617;
-  --text: #e5e7eb;
-  --muted: #94a3b8;
-  --accent: #3b82f6;
-  --glass: rgba(255,255,255,0.08);
-  --blur: blur(24px);
+:root{
+  --bg:#020617;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#3b82f6;
+  --glass:rgba(255,255,255,0.08);
+  --blur:blur(22px);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #020617, #000);
-  color: var(--text);
-  overflow-x: hidden;
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#020617,#000);
+  color:var(--text);
+  overflow-x:hidden;
 }
 
-/* Ambient glow */
-.glow {
-  position: fixed;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(59,130,246,.35), transparent 60%);
-  top: -250px;
-  right: -250px;
-  filter: blur(140px);
-  z-index: -1;
-  animation: floatGlow 14s ease-in-out infinite;
+/* glow */
+.glow{
+  position:fixed;
+  width:700px;
+  height:700px;
+  background:radial-gradient(circle,rgba(59,130,246,.35),transparent 60%);
+  top:-250px;
+  right:-250px;
+  filter:blur(140px);
+  z-index:-1;
+  animation:floatGlow 14s ease-in-out infinite;
+}
+@keyframes floatGlow{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(160px);}
 }
 
-@keyframes floatGlow {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(160px); }
-}
-
-/* Containers */
-section { padding: 120px 24px; }
-.container { max-width: 1200px; margin:auto; }
+section{padding:120px 24px;}
+.container{max-width:1100px;margin:auto;}
 
 /* HERO */
-header {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+.hero{
+  text-align:center;
+  animation:heroFade 1.5s ease forwards;
+}
+@keyframes heroFade{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
-.hero {
-  text-align: center;
-  animation: heroFade 1.6s ease forwards;
+.profile-img{
+  width:190px;height:190px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:32px;
+  border:2px solid rgba(255,255,255,.2);
+  box-shadow:0 0 0 8px rgba(59,130,246,.15),
+             0 40px 120px rgba(0,0,0,.7);
+  animation:floatImage 6s ease-in-out infinite;
+}
+@keyframes floatImage{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-14px);}
 }
 
-@keyframes heroFade {
-  from { opacity:0; transform: translateY(40px); }
-  to { opacity:1; transform: translateY(0); }
+h1{
+  font-size:clamp(3rem,6vw,4.6rem);
+  font-weight:700;
+}
+h1 span{
+  background:linear-gradient(90deg,#60a5fa,#3b82f6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-/* Profile image */
-.profile-img {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 32px;
-  border: 2px solid rgba(255,255,255,.2);
-  box-shadow:
-    0 0 0 8px rgba(59,130,246,.15),
-    0 40px 120px rgba(0,0,0,.7);
-  animation: floatImage 6s ease-in-out infinite;
+.hero p{
+  margin:22px auto;
+  max-width:720px;
+  font-size:1.2rem;
+  color:var(--muted);
 }
 
-@keyframes floatImage {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+.social{
+  margin-top:36px;
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.social a{
+  padding:14px 30px;
+  border-radius:999px;
+  background:rgba(59,130,246,.15);
+  border:1px solid rgba(59,130,246,.3);
+  color:#bfdbfe;
+  text-decoration:none;
+  transition:.4s;
+}
+.social a:hover{
+  transform:translateY(-6px) scale(1.05);
+  background:rgba(59,130,246,.3);
+  box-shadow:0 30px 80px rgba(59,130,246,.45);
 }
 
-h1 {
-  font-size: clamp(3rem, 6vw, 4.6rem);
-  font-weight: 700;
-  letter-spacing: -1px;
+/* CARDS */
+.card{
+  background:var(--glass);
+  backdrop-filter:var(--blur);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:28px;
+  padding:36px;
+  margin-bottom:40px;
 }
 
-h1 span {
-  background: linear-gradient(90deg,#60a5fa,#3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.hero p {
-  margin: 22px auto;
-  max-width: 700px;
-  font-size: 1.2rem;
-  color: var(--muted);
+h2{
+  font-size:2.4rem;
+  margin-bottom:50px;
+  text-align:center;
 }
 
-/* Social buttons */
-.social {
-  margin-top: 36px;
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  flex-wrap: wrap;
+/* skills */
+.pill{
+  display:inline-block;
+  padding:10px 18px;
+  margin:8px;
+  border-radius:999px;
+  background:rgba(59,130,246,.15);
+  border:1px solid rgba(59,130,246,.3);
+  font-size:.85rem;
+  color:#bfdbfe;
+  transition:.3s;
 }
+.pill:hover{transform:scale(1.12);}
 
-.social a {
-  padding: 14px 30px;
-  border-radius: 999px;
-  background: rgba(59,130,246,.15);
-  border: 1px solid rgba(59,130,246,.3);
-  color: #bfdbfe;
-  text-decoration: none;
-  font-size: .9rem;
-  transition: all .4s ease;
-}
-
-.social a:hover {
-  transform: translateY(-6px) scale(1.05);
-  background: rgba(59,130,246,.3);
-  box-shadow: 0 30px 80px rgba(59,130,246,.45);
-}
-
-/* Glass card */
-.card {
-  background: var(--glass);
-  backdrop-filter: var(--blur);
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: 28px;
-  padding: 36px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all .9s ease;
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h2 {
-  font-size: 2.4rem;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-/* Skills */
-.pill {
-  display: inline-block;
-  padding: 10px 18px;
-  margin: 8px;
-  border-radius: 999px;
-  background: rgba(59,130,246,.15);
-  border: 1px solid rgba(59,130,246,.3);
-  color: #bfdbfe;
-  font-size: .85rem;
-  transition: transform .3s ease;
-}
-
-.pill:hover {
-  transform: scale(1.12);
-}
-
-/* Footer */
-footer {
-  padding: 60px 24px;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* Scroll animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 1s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+footer{
+  padding:60px 24px;
+  text-align:center;
+  color:var(--muted);
 }
 </style>
 </head>
@@ -197,12 +171,9 @@ footer {
 
 <header>
   <div class="container hero">
-    <img src="profile.jpg" class="profile-img" alt="Prajwal Yadav">
+    <img src="profile.jpg" class="profile-img">
     <h1>Prajwal <span>Yadav</span></h1>
-    <p>
-      Computer Science Engineer specializing in Artificial Intelligence,
-      Machine Learning, and premium software experiences.
-    </p>
+    <p>Computer Science Engineer specializing in Artificial Intelligence, Machine Learning, and modern software development.</p>
 
     <div class="social">
       <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
@@ -213,51 +184,90 @@ footer {
 </header>
 
 <section>
-  <div class="container">
-    <h2>About Me</h2>
-    <div class="card reveal">
-      <p>
-        I am a Computer Science Engineering graduate with a strong passion for
-        AI-driven systems, computer vision, and scalable modern software.
-        I focus on building clean, intelligent, and impactful digital solutions.
-      </p>
-    </div>
-  </div>
+<div class="container">
+<h2>About Me</h2>
+<div class="card reveal">
+<p>
+I am a Computer Science Engineering graduate with strong expertise in AI, Machine Learning, and deep learning architectures.
+I enjoy building intelligent systems and transforming research ideas into real-world solutions.
+</p>
+</div>
+</div>
 </section>
 
 <section>
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="card reveal">
-      <span class="pill">Python</span>
-      <span class="pill">TensorFlow</span>
-      <span class="pill">PyTorch</span>
-      <span class="pill">Java</span>
-      <span class="pill">C++</span>
-      <span class="pill">JavaScript</span>
-      <span class="pill">Linux</span>
-      <span class="pill">Git</span>
-    </div>
-  </div>
+<div class="container">
+<h2>Education</h2>
+<div class="card reveal">
+<p><strong>B.Tech in Computer Science & Engineering</strong><br>
+Kalinga Institute of Industrial Technology (2021–2025)<br>
+CGPA: 8.19</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Projects</h2>
+
+<div class="card reveal">
+<strong>Facial Expression Recognition (Vision Transformer)</strong>
+<p>Built a ViT-based model to classify 72 facial expressions using the FER2013 dataset.</p>
+</div>
+
+<div class="card reveal">
+<strong>Image-Based Disease Prediction</strong>
+<p>Compared CNN, ViT, and KAN models across 24,000+ medical images for disease detection.</p>
+</div>
+
+<div class="card reveal">
+<strong>Movie Recommendation System</strong>
+<p>Developed a content-based NLP recommendation engine with cosine similarity and Streamlit UI.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Internship</h2>
+<div class="card reveal">
+<strong>Highradius – Highway to High-Radius Internship</strong>
+<p>Worked on technical support, system maintenance, troubleshooting, and team collaboration.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Skills</h2>
+<div class="card reveal">
+<span class="pill">Python</span>
+<span class="pill">TensorFlow</span>
+<span class="pill">PyTorch</span>
+<span class="pill">Java</span>
+<span class="pill">C++</span>
+<span class="pill">SQL</span>
+<span class="pill">JavaScript</span>
+<span class="pill">Linux</span>
+<span class="pill">Git</span>
+</div>
+</div>
 </section>
 
 <footer>
-  © 2025 Prajwal Yadav · Premium Animated Portfolio
+© 2025 Prajwal Yadav · Professional Portfolio
 </footer>
 
 <script>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add('active');
-    }
-  });
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+reveals.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('active');
+}});
 });
 </script>
 
 </body>
 </html>
-
