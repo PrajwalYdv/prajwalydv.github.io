@@ -1,95 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prajwal Yadav | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2 class="logo">Prajwal</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero">
-    <img src="images/profile.jpg" alt="Prajwal Yadav" />
-    <h1>Prajwal Yadav</h1>
-    <h2>Computer Science Student | AI & ML Enthusiast</h2>
-    <p>
-      I build intelligent systems using Machine Learning, Computer Vision,
-      and data-driven techniques to solve real-world problems.
-    </p>
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="resume.pdf" class="btn outline" target="_blank">Download Resume</a>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hi, I’m Prajwal</h1>
+      <h2>Software Developer | ML | Computer Vision | Computer Networking</h2>
+      <p>
+        I build intelligent, scalable systems by combining machine learning,
+        computer vision, and strong computer networking fundamentals.
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+
+    <div class="hero-img">
+      <img src="images/profile.jpg" alt="Prajwal Yadav">
+    </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-      I am a B.Tech Computer Science and Engineering student at Kalinga Institute
-      of Industrial Technology (2021–2025) with a strong interest in Artificial
-      Intelligence and Machine Learning.
+      I’m a Computer Science & Engineering student at KIIT (2021–2025) with a strong
+      passion for Machine Learning, Computer Vision, and Computer Networking.
     </p>
     <p>
-      I enjoy working on projects involving computer vision, medical image
-      analysis, and recommendation systems. I am constantly learning and
-      improving through hands-on projects.
+      I enjoy building real-world projects that combine intelligent algorithms
+      with efficient system design. I focus on writing clean, scalable, and
+      impactful solutions.
     </p>
   </section>
 
   <!-- SKILLS -->
-  <section class="skills">
+  <section class="skills" id="skills">
     <h2>Skills</h2>
-    <div class="grid">
-      <span>Python</span>
-      <span>TensorFlow</span>
-      <span>PyTorch</span>
-      <span>NumPy</span>
-      <span>Pandas</span>
-      <span>Java</span>
-      <span>C / C++</span>
-      <span>SQL</span>
-      <span>JavaScript</span>
-      <span>Linux</span>
+    <div class="skills-grid">
+      <div>Python</div>
+      <div>Machine Learning</div>
+      <div>Computer Vision</div>
+      <div>Computer Networking</div>
+      <div>TensorFlow</div>
+      <div>PyTorch</div>
+      <div>NumPy & Pandas</div>
+      <div>Java</div>
+      <div>C / C++</div>
+      <div>SQL</div>
+      <div>JavaScript</div>
+      <div>Linux</div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section class="projects" id="projects">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
 
-    <div class="card">
-      <h3>Facial Expression Recognition (Vision Transformer)</h3>
-      <p>
-        Built an image classification model capable of recognizing 72 facial
-        expressions using Vision Transformer architecture.
-      </p>
-      <p><b>Tech:</b> Python, TensorFlow, NumPy</p>
-    </div>
+    <div class="project-grid">
 
-    <div class="card">
-      <h3>Disease Prediction using CNN, ViT & KAN</h3>
-      <p>
-        Compared deep learning models for disease detection from medical images
-        across multiple datasets.
-      </p>
-      <p><b>Tech:</b> TensorFlow, Keras, PyTorch</p>
-    </div>
+      <div class="project-card">
+        <h3>Facial Expression Recognition</h3>
+        <p>
+          Vision Transformer based model capable of recognizing 72 human facial
+          expressions from the FER2013 dataset.
+        </p>
+        <span>Python • TensorFlow • ViT</span>
+      </div>
 
-    <div class="card">
-      <h3>Movie Recommendation System</h3>
-      <p>
-        Built a content-based recommendation system using NLP and cosine
-        similarity with a Streamlit web interface.
-      </p>
-      <p><b>Tech:</b> Python, NLP, Streamlit</p>
+      <div class="project-card">
+        <h3>Disease Prediction System</h3>
+        <p>
+          Comparative analysis of CNN, ViT, and KAN models for medical image-based
+          disease detection.
+        </p>
+        <span>TensorFlow • PyTorch • Deep Learning</span>
+      </div>
+
+      <div class="project-card">
+        <h3>Movie Recommendation System</h3>
+        <p>
+          Content-based recommendation engine using NLP and cosine similarity
+          with an interactive Streamlit interface.
+        </p>
+        <span>Python • NLP • Streamlit</span>
+      </div>
+
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact</h2>
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
     <p>Email: prajwaly24@gmail.com</p>
-    <p>GitHub | LinkedIn</p>
+    <p>
+      <a href="#" target="_blank">GitHub</a> •
+      <a href="#" target="_blank">LinkedIn</a>
+    </p>
   </section>
 
 </body>
