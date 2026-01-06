@@ -12,6 +12,7 @@ const observer = new IntersectionObserver(
 );
 
 elements.forEach(el => observer.observe(el));
+
 /* ========== Typed subtitle ========== */
 (function initTyped() {
   const typedEl = document.querySelector(".typed");
@@ -63,14 +64,12 @@ elements.forEach(el => observer.observe(el));
     const dx = (e.clientX - cx);
     const dy = (e.clientY - cy);
     blobs.forEach((b, i) => {
-      const depth = (i + 1) * 8; // change for stronger effect
       const tx = dx * strength * (i + 1);
       const ty = dy * strength * (i + 1);
       b.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${1 + i * 0.01})`;
     });
   });
 
-  // reset on mouse leave
   hero.addEventListener("mouseleave", () => {
     blobs.forEach(b => b.style.transform = "");
   });
