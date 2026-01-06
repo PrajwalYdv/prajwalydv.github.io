@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prajwal Yadav | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
 </head>
 <body>
+
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Prajwal</div>
@@ -19,51 +18,57 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
-  <section class="hero fade-up" id="home">
+  <section class="hero" id="home">
     <div class="hero-text">
-      <h1><span class="wave">👋</span> Hi, I’m <span class="highlight">Prajwal</span></h1>
-      <h2>Software Developer | ML | Computer Vision | Networking</h2>
+      <h1>Hi, I’m Prajwal</h1>
+      <h2>Software Developer | ML | Computer Vision | Computer Networking</h2>
       <p>
-        Passionate about building real-world solutions with intelligent systems & scalable networks.
+        I’m a software developer focused on building real-world applications using
+        Machine Learning, Computer Vision, and efficient system design backed by
+        computer networking principles.
       </p>
-      <div class="buttons">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="resume.pdf" class="btn outline" target="_blank">Resume</a>
-      </div>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="resume.pdf" class="btn outline" target="_blank">Resume</a>
     </div>
+
     <div class="hero-img">
       <img src="images/profile.jpg" alt="Prajwal Yadav" />
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="about fade-up">
+  <section class="about fade-up" id="about">
     <h2>About Me</h2>
-    <p>I am a Computer Science undergraduate driven by curiosity and creativity. I enjoy turning complex problems into simple, beautiful, and intuitive solutions using machine learning, computer vision, and networking fundamentals. Whether it's a freelance client project or an academic challenge, I bring technical depth and clear communication to the table.</p>
+    <p>
+      I am a Computer Science and Engineering undergraduate with a strong interest
+      in building intelligent systems that solve real-world problems.
+    </p>
+    <p>
+      I enjoy working at the intersection of Machine Learning, Computer Vision,
+      and Computer Networking, combining algorithmic thinking with system-level understanding.
+    </p>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="skills fade-up">
+  <section class="skills fade-up" id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div>Python</div>
       <div>Machine Learning</div>
       <div>Computer Vision</div>
       <div>Computer Networking</div>
-      <div>C/C++</div>
-      <div>Java</div>
-      <div>JavaScript</div>
-      <div>SQL</div>
       <div>TensorFlow</div>
       <div>PyTorch</div>
-      <div>Git</div>
+      <div>NumPy & Pandas</div>
+      <div>Java</div>
+      <div>C / C++</div>
+      <div>SQL</div>
+      <div>JavaScript</div>
       <div>Linux</div>
     </div>
   </section>
@@ -71,21 +76,27 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="experience fade-up">
     <h2>Experience</h2>
+
     <div class="experience-card">
-      <h3>01 - Networking Intern</h3>
-      <p class="company">Prime Television</p>
+      <span class="exp-number">01</span>
+      <h3>Computer Networking Intern</h3>
+      <p class="company">Prime Television · Internship</p>
       <p class="duration">Ongoing</p>
       <ul>
-        <li>Worked on VLAN, Cisco Packet Tracer simulations, IP addressing.</li>
-        <li>Set up internal file sharing servers and troubleshooting connectivity.</li>
+        <li>Configured VLANs and simulated networks using Cisco Packet Tracer.</li>
+        <li>Worked with IP addressing, routing, and switching concepts.</li>
+        <li>Assisted with file-sharing servers and network troubleshooting.</li>
       </ul>
     </div>
+
     <div class="experience-card">
-      <h3>02 - Technical Support Intern</h3>
-      <p class="company">Highradius</p>
+      <span class="exp-number">02</span>
+      <h3>Technical Support & Operations Intern</h3>
+      <p class="company">Highradus</p>
       <p class="duration">May 2024 – June 2024</p>
       <ul>
-        <li>Supported technical operations, issue resolution, and team documentation.</li>
+        <li>Provided technical support and system troubleshooting.</li>
+        <li>Assisted with operational tasks and documentation.</li>
       </ul>
     </div>
   </section>
@@ -93,72 +104,60 @@
   <!-- EDUCATION -->
   <section id="education" class="education fade-up">
     <h2>Education</h2>
+
     <div class="education-card">
-      <h3>B.Tech in Computer Science</h3>
+      <span class="edu-number">01</span>
+      <h3>B.Tech in Computer Science & Engineering</h3>
       <p class="institute">KIIT University</p>
       <p class="duration">2021 – 2025</p>
       <p class="cgpa">CGPA: 8.19</p>
     </div>
+
     <div class="education-card">
-      <h3>Higher Secondary (XII)</h3>
+      <span class="edu-number">02</span>
+      <h3>Higher Secondary (Class XII)</h3>
       <p class="institute">Little Angels’ College</p>
-      <p class="duration">2018 – 2020</p>
-      <p>CGPA: 3.02 (75.5%)</p>
+      <p class="cgpa">75.5%</p>
     </div>
+
     <div class="education-card">
-      <h3>Secondary (X)</h3>
+      <span class="edu-number">03</span>
+      <h3>Secondary (Class X)</h3>
       <p class="institute">Kadambari Academy</p>
-      <p class="duration">2018</p>
-      <p>CGPA: 3.40 (85%)</p>
+      <p class="cgpa">85%</p>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="projects fade-up">
-    <h2>Projects</h2>
+  <section class="projects fade-up" id="projects">
+    <h2>Featured Projects</h2>
+
     <div class="project-grid">
       <div class="project-card">
-        <img src="images/fer.jpg" alt="Facial Expression Recognition">
+        <img src="images/fer.jpg" alt="FER">
         <h3>Facial Expression Recognition</h3>
-        <p>ViT model trained on FER2013 to detect 72 expressions.</p>
+        <p>Vision Transformer model trained on FER2013.</p>
       </div>
+
       <div class="project-card">
-        <img src="images/disease.jpg" alt="Disease Prediction">
+        <img src="images/disease.jpg" alt="Disease Detection">
         <h3>Disease Prediction System</h3>
-        <p>Compared CNN, ViT, and KAN on medical image-based diagnostics.</p>
+        <p>Medical image classification using CNN, ViT, and KAN.</p>
       </div>
+
       <div class="project-card">
         <img src="images/movie.jpg" alt="Movie Recommendation">
-        <h3>Movie Recommendation</h3>
-        <p>NLP + cosine similarity based recommender with Streamlit UI.</p>
+        <h3>Movie Recommendation System</h3>
+        <p>Content-based recommendation using NLP.</p>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="services fade-up">
-    <h2>Freelance Services</h2>
-    <ul>
-      <li>Web Development & Hosting</li>
-      <li>ML Model Deployment</li>
-      <li>Custom Dashboard Creation</li>
-      <li>Computer Networking Setup</li>
-    </ul>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="testimonials fade-up">
-    <h2>Testimonials</h2>
-    <blockquote>
-      "Prajwal delivered a clean, fast, and responsive application. Highly recommend for tech freelancing!"
-      <br><cite>– A Happy Client</cite>
-    </blockquote>
-  </section>
-
   <!-- CONTACT -->
-  <section id="contact" class="contact fade-up">
-    <h2>Contact</h2>
+  <section class="contact fade-up" id="contact">
+    <h2>Get In Touch</h2>
     <p>Email: <a href="mailto:prajwaly24@gmail.com">prajwaly24@gmail.com</a></p>
+
     <div class="social-links">
       <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
       <a href="https://www.instagram.com/_prajwal_ydv/" target="_blank">Instagram</a>
@@ -166,5 +165,7 @@
       <a href="https://wa.me/9779863453140" target="_blank">WhatsApp</a>
     </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
