@@ -197,4 +197,80 @@ h2 {
     margin-top: 20px;
   }
 }
+/* EDUCATION */
+.education {
+  padding: 80px 10%;
+}
+
+.education h2 {
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.education-card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 700px;
+}
+
+.education-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.education-card .institute {
+  color: #cbd5f5;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.education-card .duration,
+.education-card .cgpa {
+  color: #94a3b8;
+  font-size: 14px;
+}
+/* EXPERIENCE */
+.experience {
+  padding: 80px 10%;
+}
+
+.experience h2 {
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.experience-card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  max-width: 900px;
+}
+
+.experience-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.experience-card .company {
+  color: #cbd5f5;
+  font-size: 15px;
+}
+
+.experience-card .duration {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+ 
 
