@@ -231,39 +231,47 @@ h2 {
   font-size: 14px;
 }
 /* EXPERIENCE */
+/* EXPERIENCE SECTION FIX */
 .experience {
   padding: 80px 10%;
 }
 
 .experience h2 {
   color: #38bdf8;
-  margin-bottom: 30px;
+  font-size: 32px;
+  margin-bottom: 40px;
 }
 
+/* Card styling */
 .experience-card {
-  background: #111827;
-  padding: 30px;
-  border-radius: 16px;
+  background: #0f172a;
+  padding: 28px 30px;
+  border-radius: 18px;
   margin-bottom: 30px;
   max-width: 900px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.08);
 }
 
+/* Role title */
 .experience-card h3 {
   font-size: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
+/* Company + duration */
 .experience-card .company {
   color: #cbd5f5;
   font-size: 15px;
+  margin-bottom: 4px;
 }
 
 .experience-card .duration {
   color: #94a3b8;
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
+/* Bullet list */
 .experience-card ul {
   padding-left: 20px;
 }
@@ -272,5 +280,6 @@ h2 {
   margin-bottom: 8px;
   line-height: 1.6;
 }
+
  
 
