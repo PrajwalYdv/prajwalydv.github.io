@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prajwal Yadav | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <div class="bg-orb orb-1"></div>
-<div class="bg-orb orb-2"></div>
-<div class="bg-orb orb-3"></div>
 
+<body class="light">
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Prajwal</div>
-    <ul>
+
+    <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -24,53 +23,48 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- THEME TOGGLE -->
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-text">
-  <h1>Hi, I’m Prajwal</h1>
+    <div class="hero-left">
+      <h2>researcher</h2>
+      <p>
+        Interested in intelligent systems, machine learning,
+        computer vision, and how data flows through networks.
+      </p>
+    </div>
 
-  <!-- typed subtitle (JS will populate) -->
-  <h2 class="typed" aria-live="polite"></h2>
-
-  <p>
-    I’m a software developer focused on building real-world applications using
-    Machine Learning, Computer Vision, and efficient system design backed by
-    computer networking principles.
-  </p>
-
-  <a href="#projects" class="btn">View My Work</a>
-  <a href="resume.pdf" class="btn outline" target="_blank">Resume</a>
-
-  <!-- decorative animated blobs (pure CSS + small JS parallax) -->
-  <div class="hero-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-</div>
-
-    <div class="hero-img">
+    <div class="hero-center">
       <img src="images/profile.jpg" alt="Prajwal Yadav" />
+      <h1>Prajwal</h1>
+    </div>
+
+    <div class="hero-right">
+      <h2>&lt;coder&gt;</h2>
+      <p>
+        Software developer building scalable, clean,
+        and efficient systems with real-world impact.
+      </p>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about fade-up" id="about">
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a Computer Science and Engineering undergraduate with a strong interest
-      in building intelligent systems that solve real-world problems.
-    </p>
-    <p>
+      I am a Computer Science and Engineering undergraduate with a strong
+      interest in building intelligent systems that solve real-world problems.
       I enjoy working at the intersection of Machine Learning, Computer Vision,
-      and Computer Networking, combining algorithmic thinking with system-level understanding.
+      and Computer Networking.
     </p>
   </section>
 
   <!-- SKILLS -->
-  <section class="skills fade-up" id="skills">
+  <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div>Python</div>
@@ -83,104 +77,69 @@
       <div>Java</div>
       <div>C / C++</div>
       <div>SQL</div>
-      <div>JavaScript</div>
-      <div>Linux</div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="experience fade-up">
+  <section id="experience">
     <h2>Experience</h2>
 
-    <div class="experience-card">
-      <span class="exp-number">01</span>
+    <div class="card">
       <h3>Computer Networking Intern</h3>
-      <p class="company">Prime Television · Internship</p>
-      <p class="duration">Ongoing</p>
+      <p><strong>Prime Television</strong> · Ongoing</p>
       <ul>
-        <li>Configured VLANs and simulated networks using Cisco Packet Tracer.</li>
-        <li>Worked with IP addressing, routing, and switching concepts.</li>
-        <li>Assisted with file-sharing servers and network troubleshooting.</li>
+        <li>Configured VLANs and simulated networks using Cisco Packet Tracer</li>
+        <li>Worked with IP addressing, routing, and switching</li>
+        <li>Assisted with file-sharing servers and troubleshooting</li>
       </ul>
     </div>
 
-    <div class="experience-card">
-      <span class="exp-number">02</span>
+    <div class="card">
       <h3>Technical Support & Operations Intern</h3>
-      <p class="company">Highradus</p>
-      <p class="duration">May 2024 – June 2024</p>
+      <p><strong>Highradus</strong> · May 2024 – June 2024</p>
       <ul>
-        <li>Provided technical support and system troubleshooting.</li>
-        <li>Assisted with operational tasks and documentation.</li>
+        <li>Provided technical support and system maintenance</li>
+        <li>Assisted in operational troubleshooting</li>
       </ul>
     </div>
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="education fade-up">
+  <section id="education">
     <h2>Education</h2>
 
-    <div class="education-card">
-      <span class="edu-number">01</span>
+    <div class="card">
       <h3>B.Tech in Computer Science & Engineering</h3>
-      <p class="institute">KIIT University</p>
-      <p class="duration">2021 – 2025</p>
-      <p class="cgpa">CGPA: 8.19</p>
+      <p>KIIT University · 2021 – 2025 · CGPA: 8.19</p>
     </div>
 
-    <div class="education-card">
-      <span class="edu-number">02</span>
+    <div class="card">
       <h3>Higher Secondary (Class XII)</h3>
-      <p class="institute">Little Angels’ College</p>
-      <p class="cgpa">75.5%</p>
+      <p>Little Angels’ College · 75.5%</p>
     </div>
 
-    <div class="education-card">
-      <span class="edu-number">03</span>
+    <div class="card">
       <h3>Secondary (Class X)</h3>
-      <p class="institute">Kadambari Academy</p>
-      <p class="cgpa">85%</p>
+      <p>Kadambari Academy · 85%</p>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="projects fade-up" id="projects">
-    <h2>Featured Projects</h2>
+  <section id="projects">
+    <h2>Projects</h2>
 
     <div class="project-grid">
-      <div class="project-card">
-        <img src="images/fer.jpg" alt="FER">
-        <h3>Facial Expression Recognition</h3>
-        <p>Vision Transformer model trained on FER2013.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="images/disease.jpg" alt="Disease Detection">
-        <h3>Disease Prediction System</h3>
-        <p>Medical image classification using CNN, ViT, and KAN.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="images/movie.jpg" alt="Movie Recommendation">
-        <h3>Movie Recommendation System</h3>
-        <p>Content-based recommendation using NLP.</p>
-      </div>
+      <div class="card">Facial Expression Recognition</div>
+      <div class="card">Disease Prediction System</div>
+      <div class="card">Movie Recommendation System</div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact fade-up" id="contact">
-    <h2>Get In Touch</h2>
-    <p>Email: <a href="mailto:prajwaly24@gmail.com">prajwaly24@gmail.com</a></p>
-
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/_prajwal_ydv/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/share/1BtzQKxUsY/?mibextid=wwXIfr" target="_blank">Facebook</a>
-      <a href="https://wa.me/9779863453140" target="_blank">WhatsApp</a>
-    </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: prajwaly24@gmail.com</p>
   </section>
 
-  <script src="script.js"></script>
 </body>
 </html>
