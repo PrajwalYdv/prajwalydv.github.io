@@ -1,6 +1,6 @@
 // theme toggle and persistence
 const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
+const body = document.documentElement; // <html>
 const saved = localStorage.getItem('theme');
 if (saved) body.setAttribute('data-theme', saved);
 else body.setAttribute('data-theme', 'dark'); // default
