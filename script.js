@@ -1,75 +1,101 @@
-// theme toggle and persistence
-const themeToggle = document.getElementById('themeToggle');
-const body = document.documentElement; // <html>
-const saved = localStorage.getItem('theme');
-if (saved) body.setAttribute('data-theme', saved);
-else body.setAttribute('data-theme', 'dark'); // default
+/* =========================
+   THEME TOGGLE (DARK / LIGHT)
+========================= */
+const themeToggle = document.getElementById("themeToggle");
+const root = document.documentElement;
 
-themeToggle.addEventListener('click', () => {
-  const current = body.getAttribute('data-theme') || 'dark';
-  const next = current === 'dark' ? 'light' : 'dark';
-  body.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
+// Load saved theme or default to dark
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme);
+} else {
+  root.setAttribute("data-theme", "dark");
+}
+
+// Toggle theme on click
+themeToggle.addEventListener("click", () => {
+  const currentTheme = root.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
 });
 
-// set year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+/* =========================
+   FOOTER YEAR
+========================= */
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// simple typewriter rotating words for hero
-class Typer {
-  constructor(el, words = [], typeSpeed = 60, pause = 1600) {
-    this.el = el;
+/* =========================
+   TYPEWRITER EFFECT
+========================= */
+class TypeWriter {
+  constructor(element, words, speed = 60, pause = 1400) {
+    this.el = element;
     this.words = words;
-    this.typeSpeed = typeSpeed;
+    this.speed = speed;
     this.pause = pause;
     this.wordIndex = 0;
     this.charIndex = 0;
-    this.forward = true;
-    this.loop();
+    this.isDeleting = false;
+    this.type();
   }
-  loop() {
-    const current = this.words[this.wordIndex];
-    if(this.forward) {
-      this.charIndex++;
-      this.el.textContent = current.slice(0, this.charIndex);
-      if(this.charIndex === current.length) {
-        this.forward = false;
-        setTimeout(()=> this.loop(), this.pause);
-        return;
-      }
-    } else {
+
+  type() {
+    const currentWord = this.words[this.wordIndex];
+    let displayedText;
+
+    if (this.isDeleting) {
       this.charIndex--;
-      this.el.textContent = current.slice(0, this.charIndex);
-      if(this.charIndex === 0) {
-        this.forward = true;
-        this.wordIndex = (this.wordIndex + 1) % this.words.length;
-      }
+      displayedText = currentWord.substring(0, this.charIndex);
+    } else {
+      this.charIndex++;
+      displayedText = currentWord.substring(0, this.charIndex);
     }
-    setTimeout(()=> this.loop(), this.typeSpeed);
+
+    this.el.textContent = displayedText;
+
+    let typingSpeed = this.speed;
+
+    if (!this.isDeleting && displayedText === currentWord) {
+      typingSpeed = this.pause;
+      this.isDeleting = true;
+    } else if (this.isDeleting && displayedText === "") {
+      this.isDeleting = false;
+      this.wordIndex = (this.wordIndex + 1) % this.words.length;
+      typingSpeed = 400;
+    }
+
+    setTimeout(() => this.type(), typingSpeed);
   }
 }
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  // initialize typed word
-  const typedEl = document.querySelector('.typed');
-  if(typedEl){
-    let words = [];
-    try { words = JSON.parse(typedEl.dataset.words); } catch(e){ words = ['I build things.']; }
-    new Typer(typedEl, words, 40, 1300);
+// Initialize typing effect
+document.addEventListener("DOMContentLoaded", () => {
+  const typedElement = document.querySelector(".typed");
+
+  if (typedElement) {
+    const words = JSON.parse(typedElement.getAttribute("data-words"));
+    new TypeWriter(typedElement, words);
   }
 
-  // intersection observer for fade-up
-  const elements = document.querySelectorAll('.section, .exp-card, .project-card, .edu-card, .skill, .hero-left, .hero-right');
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-      if(entry.isIntersecting) entry.target.classList.add('show','fade-up');
-    });
-  }, { threshold: 0.12 });
+  /* =========================
+     SCROLL REVEAL ANIMATION
+  ========================= */
+  const revealElements = document.querySelectorAll(".reveal");
 
-  elements.forEach(el => {
-    el.classList.add('fade-up');
-    observer.observe(el);
-  });
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-  // ensure toggle knob initial position matches theme (visual handled in CSS)
+  revealElements.forEach(el => revealObserver.observe(el));
 });
