@@ -1,166 +1,234 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prajwal Yadav | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prajwal Yadav — Portfolio</title>
 
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <script defer src="script.js"></script>
 </head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">Prajwal</div>
 
-<body>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">Prajwal</div>
+      <div class="controls">
+        <div class="social-links desktop-only">
+          <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/_prajwal_ydv/" target="_blank" rel="noopener">Instagram</a>
+        </div>
 
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  <!-- THEME TOGGLE -->
-  <button id="themeToggle" class="theme-btn">🌙</button>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="hero-new">
-  <div class="hero-left">
-    <h1>
-      <span class="thin">designer</span><br>
-      <span class="bold">&lt;coder&gt;</span>
-    </h1>
-
-    <p class="hero-sub">
-      Software Developer focused on ML, Computer Vision  
-      and scalable computer networking systems.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#projects" class="btn primary">View Work</a>
-      <a href="resume.pdf" target="_blank" class="btn outline">Resume</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle color mode" title="Toggle light / dark">
+          <span class="toggle-knob"></span>
+        </button>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="hero-right">
-    <img src="images/hero.jpg">
-  </div>
-</section>
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="kicker">engineer  <span class="pipe">&lt;developer&gt;</span></div>
 
-<!-- ABOUT -->
-<section id="about" class="fade-up">
-  <h2>About Me</h2>
-  <p>
-    I am a Computer Science and Engineering undergraduate passionate about solving
-    real-world problems using intelligent systems. I enjoy working at the
-    intersection of Machine Learning, Computer Vision, and Computer Networking.
-  </p>
-</section>
+          <h1 class="hero-title">
+            <span class="typed" data-words='["I build scalable systems.","I build intelligent ML products."]'></span>
+          </h1>
 
-<!-- SKILLS -->
-<section id="skills" class="fade-up">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <span>Python</span>
-    <span>Machine Learning</span>
-    <span>Computer Vision</span>
-    <span>Computer Networking</span>
-    <span>TensorFlow</span>
-    <span>PyTorch</span>
-    <span>Java</span>
-    <span>C / C++</span>
-    <span>SQL</span>
-    <span>Linux</span>
-  </div>
-</section>
+          <p class="hero-desc">
+            I’m a Computer Science & Engineering undergraduate building real-world applications using
+            Machine Learning, Computer Vision and reliable networking design. I bridge algorithmic thinking
+            with system-level engineering.
+          </p>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="fade-up">
-  <h2>Experience</h2>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Work</a>
+            <a class="btn outline" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+          </div>
 
-  <div class="card">
-    <h3>01 · Computer Networking Intern</h3>
-    <p class="muted">Prime Television · Ongoing</p>
-    <ul>
-      <li>Configured VLANs and simulated networks using Cisco Packet Tracer</li>
-      <li>Worked with IP addressing, routing, and switching</li>
-      <li>Assisted with file servers and troubleshooting</li>
-    </ul>
-  </div>
+          <div class="hero-small">
+            <strong>Freelance</strong> • Academic projects • Machine Learning & Networking
+          </div>
+        </div>
 
-  <div class="card">
-    <h3>02 · Technical Support & Operations Intern</h3>
-    <p class="muted">Highradus · May 2024 – June 2024</p>
-    <ul>
-      <li>Handled technical support and system maintenance</li>
-      <li>Resolved operational issues</li>
-      <li>Documented internal processes</li>
-    </ul>
-  </div>
-</section>
+        <div class="hero-right">
+          <div class="profile-frame">
+            <img src="images/profile.jpg" alt="Prajwal Yadav — portrait" class="profile-photo" />
+            <div class="frame-decor"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- EDUCATION -->
-<section id="education" class="fade-up">
-  <h2>Education</h2>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="lead">
+          I’m a Computer Science and Engineering undergraduate who loves turning ideas into reliable software.
+          My curiosity moves between model design (ML & Computer Vision) and the systems that run them (networking,
+          servers, and deployment). I enjoy prototyping end-to-end solutions — from dataset and model to efficient
+          system design that scales.
+        </p>
+      </div>
+    </section>
 
-  <div class="card">
-    <h3>B.Tech – Computer Science & Engineering</h3>
-    <p class="muted">KIIT University · 2021 – 2025 · CGPA 8.19</p>
-  </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">Python</div>
+          <div class="skill">Machine Learning</div>
+          <div class="skill">Computer Vision</div>
+          <div class="skill">Computer Networking</div>
+          <div class="skill">TensorFlow</div>
+          <div class="skill">PyTorch</div>
+          <div class="skill">NumPy &amp; Pandas</div>
+          <div class="skill">Java</div>
+          <div class="skill">C / C++</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Linux</div>
+          <div class="skill">Docker</div>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h3>Higher Secondary (XII)</h3>
-    <p class="muted">Little Angels’ College · 75.5%</p>
-  </div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
 
-  <div class="card">
-    <h3>Secondary (X)</h3>
-    <p class="muted">Kadambari Academy · 85%</p>
-  </div>
-</section>
+        <article class="exp-card">
+          <div class="exp-number">01</div>
+          <div class="exp-body">
+            <h3>Computer Networking Intern</h3>
+            <div class="meta">Prime Television · <span class="muted">Ongoing</span></div>
+            <ul>
+              <li>Configured VLANs and designed segmented networks to improve security.</li>
+              <li>Simulated network topologies and scenarios using Cisco Packet Tracer.</li>
+              <li>Applied IP addressing, routing and switching fundamentals in practice.</li>
+              <li>Assisted with file-sharing servers and internal network services.</li>
+            </ul>
+          </div>
+        </article>
 
-<!-- PROJECTS -->
-<section id="projects" class="fade-up">
-  <h2>Projects</h2>
+        <article class="exp-card">
+          <div class="exp-number">02</div>
+          <div class="exp-body">
+            <h3>Technical Support & Operations Intern</h3>
+            <div class="meta">Highradus · <span class="muted">May 2024 – June 2024</span></div>
+            <ul>
+              <li>Handled technical support and routine system maintenance.</li>
+              <li>Troubleshot operational issues and documented processes.</li>
+              <li>Collaborated with cross-functional teams to improve operations.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
 
-  <div class="project-grid">
-    <div class="card">
-      <h3>Facial Expression Recognition</h3>
-      <p>Vision Transformer trained on FER2013</p>
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <h3>B.Tech — Computer Science &amp; Engineering</h3>
+            <div class="muted">KIIT University · 2021 – 2025 · CGPA 8.19</div>
+          </div>
+
+          <div class="edu-card">
+            <h3>Higher Secondary (XII)</h3>
+            <div class="muted">Little Angels' College · 75.5% · PCM + CS</div>
+          </div>
+
+          <div class="edu-card">
+            <h3>Secondary (X)</h3>
+            <div class="muted">Kadambari Academy · 85%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="images/fer.jpg" alt="Facial Expression Recognition" />
+            <div class="project-body">
+              <h3>Facial Expression Recognition</h3>
+              <p>Vision Transformer trained on FER2013 to classify facial expressions. Designed preprocessing,
+                 data augmentation and model evaluation metrics; built a lightweight inference pipeline for demo.</p>
+              <a class="project-link" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/disease.jpg" alt="Disease Prediction System" />
+            <div class="project-body">
+              <h3>Disease Prediction System</h3>
+              <p>Comparative analysis of CNN, ViT and KAN architectures for medical image classification with
+                 sensitivity/specificity tradeoffs. Deployed a simple Streamlit demo to visualize predictions.</p>
+              <a class="project-link" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/movie.jpg" alt="Movie Recommendation System" />
+            <div class="project-body">
+              <h3>Movie Recommendation System</h3>
+              <p>Content-based recommendation using NLP embeddings, cosine similarity and a Streamlit interface
+                 for interactive recommendations and filtering.</p>
+              <a class="project-link" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Get In Touch</h2>
+          <p>Email: <a href="mailto:prajwaly24@gmail.com">prajwaly24@gmail.com</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank" rel="noopener">LinkedIn</a>
+            · <a href="https://www.instagram.com/_prajwal_ydv/" target="_blank" rel="noopener">Instagram</a>
+            · <a href="https://wa.me/9779863453140" target="_blank" rel="noopener">WhatsApp</a>
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <h3>Available for freelance & academic collaborations</h3>
+          <a class="btn primary" href="mailto:prajwaly24@gmail.com">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Prajwal Yadav — Built with HTML, CSS &amp; JS</small>
     </div>
-
-    <div class="card">
-      <h3>Disease Prediction System</h3>
-      <p>CNN · ViT · KAN comparative analysis</p>
-    </div>
-
-    <div class="card">
-      <h3>Movie Recommendation System</h3>
-      <p>NLP-based content recommendation</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade-up contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:prajwaly24@gmail.com">prajwaly24@gmail.com</a></p>
-
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/prajwal-yadav-7048b2257" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/_prajwal_ydv/" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/share/1BtzQKxUsY/" target="_blank">Facebook</a>
-    <a href="https://wa.me/9779863453140" target="_blank">WhatsApp</a>
-  </div>
-</section>
-
+  </footer>
 </body>
 </html>
