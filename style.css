@@ -225,16 +225,18 @@ h2 {
 
 .hero-right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  position: relative;
 }
 
 .hero-right img {
-  width: 320px;
-  height: auto;
-  border-radius: 8px;
+  width: 340px;
+  border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  transform: translateX(-60px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.18);
 }
+
 
 /* Mobile */
 @media (max-width: 900px) {
@@ -243,11 +245,13 @@ h2 {
     text-align: center;
   }
 
-  .hero-actions {
+  .hero-right {
     justify-content: center;
   }
 
-  .hero-left h1 {
-    font-size: 3rem;
+  .hero-right img {
+    transform: none;
+    width: 260px;
+    margin-top: 40px;
   }
 }
